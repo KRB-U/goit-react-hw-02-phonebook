@@ -60,14 +60,21 @@ class App extends Component {
     this.setState({ filter: evt.target.value });
   };
 
+  getVisibleContacts = () => {
+    const { contacts, filter } = this.state;
+
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter)
+    );
+  };
+
   render() {
     const { contacts, filter } = this.state;
 
     //toLowerCase Filter
-    const normalizedFilter = filter.toLowerCase();
-    const visibleContacts = contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
-    );
+
+    const visibleContacts = this.getVisibleContacts();
 
     return (
       <>
