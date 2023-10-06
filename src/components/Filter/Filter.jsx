@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 const Filter = ({ stateValue, stateFromFilter }) => {
   return (
@@ -8,5 +8,4 @@ const Filter = ({ stateValue, stateFromFilter }) => {
     </label>
   );
 };
-// dfdf
 export { Filter };
