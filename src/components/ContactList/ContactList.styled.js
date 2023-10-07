@@ -22,4 +22,16 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   padding: 10px;
+
+  color: black;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+
+  &:active {
+    background-color: red;
+    color: white;
+  }
 `;
