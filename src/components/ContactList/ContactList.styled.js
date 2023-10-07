@@ -5,7 +5,7 @@ export const ContactItem = styled.li`
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  width: 350px;
+  width: 300px;
   justify-content: space-between;
 `;
 
