@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { Button } from './ContactForm.styled';
 
 class ContactForm extends Component {
   state = {
@@ -62,9 +63,9 @@ class ContactForm extends Component {
             style={{ marginBottom: '15px' }}
           />
         </label>
-        <button type="submit" style={{ marginLeft: '15px' }}>
+        <Button type="submit" style={{ marginLeft: '15px' }}>
           Add contact
-        </button>
+        </Button>
       </form>
     );
   }

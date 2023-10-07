@@ -8,13 +8,12 @@ export const FilterContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-export const inputItem = styled.input`
+export const InputItem = styled.input`
   text-align: center;
   margin-left: 15px;
 `;
 
 export const LabelInput = styled.label`
-  text-align: center;
-  font-size: 15px;
-  margin-right: 10px;
+  font-size: 17px;
+  margin-bottom: 10px;
 `;

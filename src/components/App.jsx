@@ -8,7 +8,7 @@ import { nanoid } from 'nanoid';
 import 'components/ContactForm/ContactForm';
 
 //STYLED
-import { TitlePhonebook, TitleContacts } from './App.styled';
+import { TitlePhonebook, TitleContacts, ContainerWrapper } from './App.styled';
 
 class App extends Component {
   state = {
@@ -93,7 +93,7 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <>
+      <ContainerWrapper>
         <TitlePhonebook>Phonebook</TitlePhonebook>
         <ContactForm formDataToApp={this.handleSubmitForm}></ContactForm>
         <TitleContacts>Contacts</TitleContacts>
@@ -105,7 +105,7 @@ class App extends Component {
           arrContacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         ></ContactList>
-      </>
+      </ContainerWrapper>
     );
   }
 }

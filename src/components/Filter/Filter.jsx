@@ -1,12 +1,10 @@
-import { FilterContainer, LabelInput } from './Filter.styled';
+import { FilterContainer, InputItem, LabelInput } from './Filter.styled';
 
 const Filter = ({ stateValue, stateFromFilter }) => {
   return (
     <FilterContainer>
-      <LabelInput>
-        Find contacts by name
-        <input type="text" value={stateValue} onChange={stateFromFilter} />
-      </LabelInput>
+      <LabelInput>Find contacts by name</LabelInput>
+      <InputItem type="text" value={stateValue} onChange={stateFromFilter} />
     </FilterContainer>
   );
 };
