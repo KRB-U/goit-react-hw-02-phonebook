@@ -47,14 +47,15 @@ class App extends Component {
   nameUniqueKey = nanoid(5);
 
   handleSubmitForm = newContact => {
-    const { name } = newContact;
     const { contacts } = this.state;
-    // console.log(newContact);
+
+    const { name } = newContact;
+    // console.log(name);
 
     const isNameInContacts = contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-    console.log(isNameInContacts);
+    // console.log(isNameInContacts);
 
     if (isNameInContacts) {
       alert(`${name} is already in contacts`);
@@ -85,6 +86,12 @@ class App extends Component {
     );
   };
 
+  deleteContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
+
   render() {
     const { filter } = this.state;
 
@@ -101,7 +108,10 @@ class App extends Component {
           stateValue={filter}
           stateFromFilter={this.changeFilter}
         ></Filter>
-        <ContactList arrContacts={visibleContacts}></ContactList>
+        <ContactList
+          arrContacts={visibleContacts}
+          onDeleteContact={this.deleteContact}
+        ></ContactList>
       </>
     );
   }
