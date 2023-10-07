@@ -13,9 +13,7 @@ const LabelInputName = styled.label`
   margin-left: 15px;
 `;
 
-const InputName = styled.input`
-  text-align: center;
-`;
+const InputName = styled.input``;
 
 const LabelInputPhone = styled.label`
   font-size: 17px;
@@ -36,10 +34,6 @@ const Button = styled.button`
 
   width: fit-content;
   height: 25px;
-
-  /* display: flex; */
-  /* align-items: center; */
-  /* padding: 15px; */
 
   color: black;
 
