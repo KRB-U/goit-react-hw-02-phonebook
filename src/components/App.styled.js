@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const ContainerWrapper = styled.div`
-  margin-bottom: 10px;
-
+  /* margin-bottom: 10px; */
+  /* display: flex; */
+  /* margin: 0 auto; */
   width: 800px;
 `;
 

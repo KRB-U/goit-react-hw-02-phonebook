@@ -1,6 +1,33 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+`;
+
+const LabelInputName = styled.label`
+  text-align: center;
+  margin-left: 15px;
+`;
+
+const InputName = styled.input`
+  text-align: center;
+`;
+
+const LabelInputPhone = styled.label`
+  font-size: 17px;
+  margin-bottom: 10px;
+`;
+
+const InputPhone = styled.input`
+  font-size: 17px;
+  margin-bottom: 10px;
+`;
+
+const Button = styled.button`
   border: none;
   border-radius: 5px;
 
@@ -12,7 +39,7 @@ export const Button = styled.button`
 
   /* display: flex; */
   /* align-items: center; */
-  padding: 10px;
+  /* padding: 15px; */
 
   color: black;
 
@@ -21,3 +48,12 @@ export const Button = styled.button`
     color: white;
   }
 `;
+
+export {
+  FormContainer,
+  LabelInputName,
+  InputName,
+  LabelInputPhone,
+  InputPhone,
+  Button,
+};
