@@ -101,9 +101,9 @@ class App extends Component {
 
     return (
       <>
-        <h1>Phonebook</h1>
+        <h1 style={{ marginBottom: '15px' }}>Phonebook</h1>
         <ContactForm formDataToApp={this.handleSubmitForm}></ContactForm>
-        <h2>Contacts</h2>
+        <h2 style={{ marginBottom: '15px' }}>Contacts</h2>
         <Filter
           stateValue={filter}
           stateFromFilter={this.changeFilter}
