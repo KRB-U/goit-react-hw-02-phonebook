@@ -48,14 +48,11 @@ class App extends Component {
 
   handleSubmitForm = newContact => {
     const { contacts } = this.state;
-
     const { name } = newContact;
-    // console.log(name);
 
     const isNameInContacts = contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-    // console.log(isNameInContacts);
 
     if (isNameInContacts) {
       alert(`${name} is already in contacts`);
@@ -65,13 +62,8 @@ class App extends Component {
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
-    //
-    // this.setState(prevState => {
-    //   console.log(prevState.contacts);
-    // });
   };
 
-  //FILTER
   changeFilter = evt => {
     this.setState({ filter: evt.target.value });
   };
@@ -94,8 +86,6 @@ class App extends Component {
 
   render() {
     const { filter } = this.state;
-
-    //toLowerCase Filter
 
     const visibleContacts = this.getVisibleContacts();
 
