@@ -47,14 +47,29 @@ class App extends Component {
   nameUniqueKey = nanoid(5);
 
   handleSubmitForm = newContact => {
+    const { name } = newContact;
+    const { contacts } = this.state;
+    // console.log(newContact);
+
+    const isNameInContacts = contacts.some(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+    console.log(isNameInContacts);
+
+    if (isNameInContacts) {
+      alert(`${name} is already in contacts`);
+      return;
+    }
+
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
     //
-    this.setState(prevState => {
-      console.log(prevState);
-    });
+    // this.setState(prevState => {
+    //   console.log(prevState.contacts);
+    // });
   };
+
   //FILTER
   changeFilter = evt => {
     this.setState({ filter: evt.target.value });
@@ -64,6 +79,7 @@ class App extends Component {
     const { contacts, filter } = this.state;
 
     const normalizedFilter = filter.toLowerCase();
+
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
