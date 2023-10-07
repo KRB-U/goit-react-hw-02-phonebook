@@ -1,17 +1,14 @@
+import { Button, ContactItem } from './ContactList.styled';
+
 const ContactList = ({ arrContacts, onDeleteContact }) => {
   return (
     <div>
       <ul>
         {arrContacts.map(({ name, number, id }) => (
-          <li key={id} style={{ marginBottom: '10px' }}>
+          <ContactItem key={id}>
             {name}: {number}
-            <button
-              onClick={() => onDeleteContact(id)}
-              style={{ marginLeft: '15px' }}
-            >
-              Delete
-            </button>
-          </li>
+            <Button onClick={() => onDeleteContact(id)}>Delete</Button>
+          </ContactItem>
         ))}
       </ul>
     </div>
