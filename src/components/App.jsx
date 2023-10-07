@@ -7,6 +7,9 @@ import { nanoid } from 'nanoid';
 
 import 'components/ContactForm/ContactForm';
 
+//STYLED
+import { TitlePhonebook, TitleContacts } from './App.styled';
+
 class App extends Component {
   state = {
     contacts: [
@@ -91,9 +94,9 @@ class App extends Component {
 
     return (
       <>
-        <h1 style={{ marginBottom: '15px' }}>Phonebook</h1>
+        <TitlePhonebook>Phonebook</TitlePhonebook>
         <ContactForm formDataToApp={this.handleSubmitForm}></ContactForm>
-        <h2 style={{ marginBottom: '15px' }}>Contacts</h2>
+        <TitleContacts>Contacts</TitleContacts>
         <Filter
           stateValue={filter}
           stateFromFilter={this.changeFilter}
