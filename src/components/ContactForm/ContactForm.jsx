@@ -37,10 +37,7 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label
-          htmlFor={this.formNameUniqueKey}
-          style={{ marginBottom: '15px' }}
-        >
+        <label htmlFor={this.formNameUniqueKey}>
           Name
           <input
             type="text"
@@ -60,7 +57,6 @@ class ContactForm extends Component {
             value={this.state.number}
             onChange={this.handleChange}
             id={this.formNumberUniqueKey}
-            style={{ marginBottom: '15px' }}
           />
         </label>
         <Button type="submit" style={{ marginLeft: '15px' }}>
