@@ -26,6 +26,10 @@ const InputPhone = styled.input`
   margin-right: 20px;
 `;
 
+// const Form = styled.form`
+
+// `;
+
 const Button = styled.button`
   /* display: flex; */
   /* align-items: center; */
