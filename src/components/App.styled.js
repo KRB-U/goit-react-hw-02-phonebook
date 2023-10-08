@@ -8,6 +8,7 @@ export const ContainerWrapper = styled.div`
   border: 2px solid #cccccc;
   border-radius: 10px;
   background-color: #f5f5f5;
+  margin-left: 15px;
 `;
 
 export const TitlePhonebook = styled.h1`
