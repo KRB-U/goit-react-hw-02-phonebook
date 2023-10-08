@@ -10,22 +10,27 @@ const FormContainer = styled.div`
 
 const LabelInputName = styled.label`
   text-align: center;
-  margin-left: 15px;
+  margin-right: 5px;
 `;
 
-const InputName = styled.input``;
+const InputName = styled.input`
+  margin-right: 25px;
+`;
 
 const LabelInputPhone = styled.label`
   font-size: 17px;
-  margin-bottom: 10px;
+  margin-right: 5px;
 `;
 
 const InputPhone = styled.input`
-  font-size: 17px;
-  margin-bottom: 10px;
+  margin-right: 20px;
 `;
 
 const Button = styled.button`
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
   border: none;
   border-radius: 5px;
 

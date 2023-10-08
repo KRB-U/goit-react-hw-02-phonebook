@@ -7,7 +7,9 @@ const ContactList = ({ arrContacts, onDeleteContact }) => {
         {arrContacts.map(({ name, number, id }) => (
           <ContactItem key={id}>
             {name}: {number}
-            <Button onClick={() => onDeleteContact(id)}>Delete</Button>
+            <Button type="submit" onClick={() => onDeleteContact(id)}>
+              Delete
+            </Button>
           </ContactItem>
         ))}
       </ul>

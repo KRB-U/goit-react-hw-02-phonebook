@@ -31,9 +31,9 @@ class ContactForm extends Component {
   };
 
   handleSubmit = evt => {
-    const { name, number } = this.state;
-
     evt.preventDefault();
+
+    const { name, number } = this.state;
 
     this.props.formDataToApp({ name, number, id: nanoid(6) });
     this.reset();
@@ -58,7 +58,7 @@ class ContactForm extends Component {
           <LabelInputPhone htmlFor={this.formNumberUniqueKey}>
             Number{' '}
           </LabelInputPhone>
-          <input
+          <InputPhone
             type="tel"
             name="number"
             required
