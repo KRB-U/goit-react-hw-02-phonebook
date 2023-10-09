@@ -49,7 +49,7 @@ class App extends Component {
     }
 
     this.setState(prevState => ({
-      contacts: [...prevState.contacts, newContact],
+      contacts: [...prevState.contacts, { ...newContact, id: nanoid(7) }],
     }));
   };
 

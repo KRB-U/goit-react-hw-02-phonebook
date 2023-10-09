@@ -35,7 +35,7 @@ class ContactForm extends Component {
 
     const { name, number } = this.state;
 
-    this.props.formDataToApp({ name, number, id: nanoid(6) });
+    this.props.formDataToApp({ name, number });
     this.reset();
 
     // this.setState({ name: '', number: '' });
