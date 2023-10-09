@@ -45,27 +45,29 @@ class ContactForm extends Component {
     return (
       <FormContainer>
         <form onSubmit={this.handleSubmit}>
-          <LabelInputName htmlFor={this.formNameUniqueKey}>Name</LabelInputName>
-          <InputName
-            type="text"
-            name="name"
-            required
-            value={this.state.name}
-            onChange={this.handleChange}
-            id={this.formNameUniqueKey}
-          />
+          <LabelInputName htmlFor={this.formNameUniqueKey}>
+            Name
+            <InputName
+              type="text"
+              name="name"
+              required
+              value={this.state.name}
+              onChange={this.handleChange}
+              id={this.formNameUniqueKey}
+            />
+          </LabelInputName>
 
           <LabelInputPhone htmlFor={this.formNumberUniqueKey}>
-            Number{' '}
+            Number
+            <InputPhone
+              type="tel"
+              name="number"
+              required
+              value={this.state.number}
+              onChange={this.handleChange}
+              id={this.formNumberUniqueKey}
+            />
           </LabelInputPhone>
-          <InputPhone
-            type="tel"
-            name="number"
-            required
-            value={this.state.number}
-            onChange={this.handleChange}
-            id={this.formNumberUniqueKey}
-          />
 
           <Button type="submit">Add contact</Button>
         </form>

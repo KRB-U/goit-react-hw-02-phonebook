@@ -9,8 +9,9 @@ const FormContainer = styled.div`
 `;
 
 const LabelInputName = styled.label`
-  text-align: center;
-  margin-right: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const InputName = styled.input`
@@ -20,9 +21,12 @@ const InputName = styled.input`
 const LabelInputPhone = styled.label`
   font-size: 17px;
   margin-right: 5px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const InputPhone = styled.input`
+  margin-bottom: 10px;
   margin-right: 20px;
 `;
 
